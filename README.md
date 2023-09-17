@@ -11,8 +11,8 @@ Um sistema de fórum integrado com a capacidade de permitir que profissionais de
 ![image](https://github.com/LukasComK/Project-Alfa/assets/70048434/7873598e-bc6d-4213-8b02-87c99bae17f5)
 ![image](https://github.com/LukasComK/Project-Alfa/assets/70048434/b4c67708-d085-4dc1-8f05-20696ca31d0c)
 # Detalhes Conclusivos
-• Projeto foi construido em HTML, CSS, JS, PHP e Banco de dados MySQL.
-• Projeto foi feito nos meados de 2022.
-• A Principal estrutura responsavel por min nesse projeto foi todo o back-end.
-• Pode ser que tenha varios Erros de CSS, este projeto não é a versão final oficial do produto.
-• Considera-se usar para estudos, já que o codigo quebra varios codigos de etica para um CODE CLEAN.
+- Projeto foi construido em HTML, CSS, JS, PHP e Banco de dados MySQL.
+- Projeto foi feito nos meados de 2022.
+- A Principal estrutura responsavel por min nesse projeto foi todo o back-end.
+- Pode ser que tenha varios Erros de CSS, este projeto não é a versão final oficial do produto.
+- Considera-se usar para estudos, já que o codigo quebra varios codigos de etica para um CODE CLEAN.

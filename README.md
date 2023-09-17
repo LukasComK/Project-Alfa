@@ -7,7 +7,7 @@ O objetivo era desenvolver um sistema com uma robusta infraestrutura de seguran�
 Trata-se de um site voltado para a indústria farmacêutica, com foco principal na venda de produtos em parceria com outras afiliadas (outras farmácias), e também com um eficiente mecanismo de entrega.
 ![image](https://github.com/LukasComK/Project-Alfa/assets/70048434/df3d2e34-dd28-4208-adc7-5d2cca8d03e1)
 # Diferencial do Projeto
-Um sistema de fórum integrado com a capacidade de permitir que profissionais de saúde interajam com outros clientes enquanto estão logados em suas contas. Isso tornará a plataforma não apenas um e-commerce, mas também uma comunidade interativa, potencialmente aumentando o tráfego de pessoas dentro do site.
+Um sistema de fórum integrado com a capacidade de permitir que profissionais de saúde interajam com outros clientes enquanto estão logados em suas contas. Isso tornaria a plataforma não apenas um e-commerce, mas também uma comunidade interativa, potencialmente aumentando o tráfego de pessoas dentro do site.
 ![image](https://github.com/LukasComK/Project-Alfa/assets/70048434/7873598e-bc6d-4213-8b02-87c99bae17f5)
 ![image](https://github.com/LukasComK/Project-Alfa/assets/70048434/b4c67708-d085-4dc1-8f05-20696ca31d0c)
 # Detalhes Conclusivos

@@ -1,0 +1,311 @@
+.button {
+--background: #a5eea0;
+--text: #fff;
+--cart: #fff;
+--tick: var(--background);
+position: relative;
+border: none;
+background: none;
+padding: 8px 30px;
+border-radius: 30px;
+-webkit-appearance: none;
+-webkit-tap-highlight-color: transparent;
+-webkit-mask-image: -webkit-radial-gradient(white, black);
+overflow: hidden;
+cursor: pointer;
+text-align: center;
+margin-top: 15px;
+margin-bottom: 10px;
+margin-left: 7px;
+color: var(--text);
+background: var(--background);
+transform: scale(var(--scale, 1));
+transition: transform 0.4s cubic-bezier(0.36, 1.01, 0.32, 1.27);
+}
+.button:hover{
+	--background: #a5e9a6;
+}
+.button:active {
+--scale: 0.95;
+}
+.button span {
+font-size: 20px;
+font-weight: 500;
+display: block;
+position: relative;
+padding-left: 0px;
+line-height: 26px;
+transform: translateY(var(--span-y, 0));
+transition: transform 0.7s ease;
+}
+.button span:before, .button span:after {
+content: '';
+width: var(--w, 2px);
+height: var(--h, 14px);
+border-radius: 1px;
+position: absolute;
+left: var(--l, 8px);
+top: var(--t, 6px);
+background: currentColor;
+transform: scale(0.75) rotate(var(--icon-r, 0deg)) translateY(var(--icon-y, 0));
+transition: transform 0.65s ease 0.05s;
+}
+.button span:after {
+--w: 14px;
+--h: 2px;
+--l: 2px;
+--t: 12px;
+}
+.button .cart {
+position: absolute;
+left: 50%;
+top: 50%;
+margin: -13px 0 0 -18px;
+transform-origin: 12px 23px;
+transform: translateX(-120px) rotate(-18deg);
+}
+.button .cart:before, .button .cart:after {
+content: '';
+position: absolute;
+}
+.button .cart:before {
+width: 6px;
+height: 6px;
+border-radius: 50%;
+box-shadow: inset 0 0 0 2px var(--cart);
+bottom: 0;
+left: 9px;
+filter: drop-shadow(11px 0 0 var(--cart));
+}
+.button .cart:after {
+width: 16px;
+height: 9px;
+background: var(--cart);
+left: 9px;
+bottom: 7px;
+transform-origin: 50% 100%;
+transform: perspective(4px) rotateX(-6deg) scaleY(var(--fill, 0));
+transition: transform 1.2s ease var(--fill-d);
+}
+.button .cart svg {
+z-index: 1;
+width: 36px;
+height: 26px;
+display: block;
+position: relative;
+fill: none;
+stroke: var(--cart);
+stroke-width: 2px;
+stroke-linecap: round;
+stroke-linejoin: round;
+}
+.button .cart svg polyline:last-child {
+stroke: var(--tick);
+stroke-dasharray: 10px;
+stroke-dashoffset: var(--offset, 10px);
+transition: stroke-dashoffset 0.4s ease var(--offset-d);
+}
+.button.loading {
+--scale: 0.95;
+--span-y: -32px;
+--icon-r: 180deg;
+--fill: 1;
+--fill-d: 0.8s;
+--offset: 0;
+--offset-d: 1.73s;
+}
+.button.loading .cart {
+animation: cart 3.4s linear forwards 0.2s;
+}
+@keyframes cart {
+12.5% {
+transform: translateX(-60px) rotate(-18deg);
+}
+25%, 45%, 55%, 75% {
+transform: none;
+}
+50% {
+transform: scale(0.9);
+}
+44%, 56% {
+transform-origin: 12px 23px;
+}
+45%, 55% {
+transform-origin: 50% 50%;
+}
+87.5% {
+transform: translateX(70px) rotate(-18deg);
+}
+100% {
+transform: translateX(140px) rotate(-18deg);
+}
+}
+
+
+
+
+.secaoCarrinho{
+  width: 31%;
+}
+.secaoCarrinho__titulo{
+  font-size: 28px;
+  font-weight: 600;
+  color: #EA1D2C;
+}
+.secaoCarrinho__conteudo{
+  padding: 60px 40px;
+  margin-top: 40px;
+}
+
+.secaoCarrinho__listaItens{}
+.secaoCarrinho__item{
+  font-weight: 600;
+  color: #3e3e3e;
+  border-bottom: 2px solid #3E3E3E;
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+}
+
+.secaoCarrinho__item > div{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.secaoCarrinho__item > div > h3{}
+.secaoCarrinho__item > div > span{}
+.secaoCarrinho__item > button{
+  color: #A6A6A6;
+  font-weight: 600;
+  background-color: transparent;
+  border: none;
+  font-size: 15px;
+  padding: 0;
+}
+
+.secaoCarrinho__total{
+  font-weight: 600;
+  color: #3e3e3e;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 80px;
+}
+.secaoCarrinho__total > h3{
+  font-size: 2px;
+}
+.secaoCarrinho__total > p{
+	margin-left: 10px;
+}
+.secaoCarrinho__total > span{
+	margin-right: 20px;
+}
+
+.secaoCarrinho__formaPagamento{
+  text-align: center;
+}
+.secaoCarrinho__formaPagamento > button{
+    width: 80%;
+  height: 40px;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: #a5eea0;
+  color: #f5f5f5;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+
+
+
+
+.carrinho_icone{
+  position: sticky;
+  z-index: 10;
+  top: 200px;
+  cursor: pointer;
+  float: right;
+  padding-top: 300px;
+}
+
+.carrinho_icone:hover{
+
+  opacity: 0.9;
+}
+
+
+.carrinho_fundoImagem{
+  position: sticky;
+  top: 0px;
+  background-color: #8973d9;
+  border-radius: 100%;
+  width: 90px;
+  height: 85px;
+  padding-top: 3px;
+  margin-right: 16px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+a > .carrinho_fundoImagem > img{
+  position: sticky;
+  width: 46-left: 15px;
+  padding-top: 15px;
+}
+
+
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+#main span {
+    font-size: 30px;
+    cursor: pointer
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    background-color: #f2f2f2;
+    overflow-x: hidden;
+    transition: 0.5s;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.sidenav .closebtn {
+    font-size: 36px;
+    border-bottom: none;
+    text-decoration: none;
+    color: #fff;
+    float: right;
+    margin-right: 25px;
+    margin-bottom: 50px;
+}
+
+.sidenav ul {
+    clear: both;
+}
+
+.sidenav li a {
+    padding: 12px 8px 12px 30px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+    border-bottom: 1px solid #b3ddb4;
+    text-transform: uppercase;
+}
+
+.sidenav li a:hover {
+    background: #6ba56c
+}
+
+

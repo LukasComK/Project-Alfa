@@ -1,0 +1,635 @@
+body{
+
+	background-color: #f2f2f2;
+	font-family: 'Montserrat';
+}
+
+.cabecalho{
+  background-color: #F7F7F7;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 100px
+}
+.cabecalho > .container{
+  display: flex;
+  align-items: center;
+}
+
+/* LOGO */
+
+.cabecalho__logoAlfa{
+  margin-right: 60px;
+  padding-left: 330px;
+}
+.cabecalho__logoAlfa > figure{}
+.cabecalho__logoAlfa > figure > img{
+  width: 130px;
+}
+.cabecalho__logoAlfa> figure > figcaption{
+  display: none;
+}
+
+/* PERFIL */
+
+.cabecalho__cadastro{
+	padding-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.cabecalho__cadastro > p{
+  color: #807e7e;
+  font-weight: 10px;
+  letter-spacing: 1px;
+
+}
+
+.cabecalho__fundoImagem{
+  background-color: #e0e0e0;
+  border-radius: 100%;
+  width: 30px;
+  height: 25px;
+  padding-top: 3px;
+  margin-right: 16px;
+
+}
+
+
+.cabecalho__fundoImagem > img{
+  width: 15px;
+  padding-left: 8px;
+  padding-top: 3px;
+}
+
+
+
+
+
+#show-login{
+
+  font-size: 15px;
+  font-weight: 100;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+  color: #807e7e;
+  text-decoration: none;
+  transition: 0.3s;
+
+}
+
+#show-login:hover {
+  opacity: 0.7;
+}
+
+.popup, .popup-register, .popup-cli, .popup-afi, .popup-pro, .popup-Cadcli, .popup-Cadafi, .popup-Cadpro{
+
+  position: absolute;
+  z-index: 9;
+  top: -150%;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(1.25);
+  padding: 20px 30px;
+  width: 380px;
+  background-color: #807e7e;
+  box-shadow: 2px 2px 5px 5px rgba(0,0,0, 0.15);
+  border-radius: 10px;
+  transition: top 0ms ease-in-out 200ms,
+  opacity 200ms ease-in-out 0ms,
+  transform 200ms ease-in-out 0ms;
+
+}
+
+.popup.active{
+  position: absolute;
+  top: 50%;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  transition: top 0ms ease-in-out 0ms,
+  opacity 200ms ease-in-out 0ms,
+  transform 200ms ease-in-out 0ms;
+  background-color: #e0e0e0;
+  font-size: 15px;
+  width:500px;
+
+}
+
+
+
+.popup-register.active{
+  position: absolute;
+  top: 50%;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  transition: top 0ms ease-in-out 0ms,
+  opacity 200ms ease-in-out 0ms,
+  transform 200ms ease-in-out 0ms;
+  background-color: #e0e0e0;
+  font-size: 15px;
+  width:500px;
+
+}
+
+.popup-cli.active{
+  position: absolute;
+  top: 50%;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  transition: top 0ms ease-in-out 0ms,
+  opacity 200ms ease-in-out 0ms,
+  transform 200ms ease-in-out 0ms;
+  background-color: #e0e0e0;
+  font-size: 15px;
+  width:500px;
+
+}
+
+
+.popup-Cadcli.active{
+  position: absolute;
+  top: 70%;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  transition: top 0ms ease-in-out 0ms,
+  opacity 200ms ease-in-out 0ms,
+  transform 200ms ease-in-out 0ms;
+  background-color: #e0e0e0;
+  font-size: 15px;
+  width:500px;
+
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.enviar_ícone {
+  padding: 20px 10px;
+  width: 200px;
+  height: 10px;
+  background-color: #8973d9;
+  color: #FFF;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: .5s;
+  border-radius: 10px;
+  margin-left: 135px;
+}
+
+.enviar_ícone:hover{
+  color: #333;
+  background: #bdaef2;
+}
+
+.popup-afi.active{
+  position: absolute;
+  top: 50%;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  transition: top 0ms ease-in-out 0ms,
+  opacity 200ms ease-in-out 0ms,
+  transform 200ms ease-in-out 0ms;
+  background-color: #e0e0e0;
+  font-size: 15px;
+  width:500px;
+
+}
+
+.popup-Cadafi.active{
+  position: absolute;
+  top: 80%;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  transition: top 0ms ease-in-out 0ms,
+  opacity 200ms ease-in-out 0ms,
+  transform 200ms ease-in-out 0ms;
+  background-color: #e0e0e0;
+  font-size: 15px;
+  width:500px;
+
+}
+
+.popup-pro.active{
+  position: absolute;
+  top: 50%;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  transition: top 0ms ease-in-out 0ms,
+  opacity 200ms ease-in-out 0ms,
+  transform 200ms ease-in-out 0ms;
+  background-color: #e0e0e0;
+  font-size: 15px;
+  width:500px;
+
+}
+
+.popup-Cadpro.active{
+  position: absolute;
+  top: 80%;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  transition: top 0ms ease-in-out 0ms,
+  opacity 200ms ease-in-out 0ms,
+  transform 200ms ease-in-out 0ms;
+  background-color: #e0e0e0;
+  font-size: 15px;
+  width:500px;
+
+}
+
+.popup .close-btn, .popup-register .close-btn-register, .popup-cli .close-btn-cli, .popup-afi .close-btn-afi, .popup-pro .close-btn-pro, .popup-Cadcli .close-btn-Cadcli, .popup-Cadafi .close-btn-Cadafi, .popup-Cadpro .close-btn-Cadpro{
+
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 15px;
+  height: 15px;
+  background: #ac99f2;
+  color: #eee;
+  text-align: center;
+  line-height: 15px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.popup .form .h2, .popup-register .form .h2, .popup-cli .form .h2, .popup-afi .form .h2, .popup-pro .form .h2, .popup-Cadcli .form .h2, .popup-Cadafi .form .h2, .popup-Cadpro .form .h2{
+
+  text-align: center;
+  color: #222;
+  margin: 10px 0px 20px;
+  font-size: 25px;
+}
+
+.popup .form .form-element, .popup-register .form .form-element, .popup-cli .form .form-element, .popup-afi .form .form-element, .popup-pro .form .form-element, .popup-Cadcli .form .form-element, .popup-Cadafi .form .form-element, .popup-Cadpro .form .form-element{
+
+  margin: 15px 0px;
+}
+
+.popup .form .form-element .label, .popup-register .form .form-element .label, .popup-cli .form .form-element .label, .popup-afi .form .form-element .label, .popup-pro .form .form-element .label, .popup-Cadcli .form .form-element .label, .popup-Cadafi .form .form-element .label, .popup-Cadpro .form .form-element .label{
+  font-size: 2px;
+  color:#222;
+}
+
+.popup .form .form-element input[type="text"], .popup .form .form-element input[type="password"], .popup-register .form .form-element input[type="text"], .popup-register .form .form-element input[type="password"], .popup-cli .form .form-element input[type="text"], .popup-cli .form .form-element input[type="password"], .popup-afi .form .form-element input[type="text"], .popup-afi .form .form-element input[type="password"], .popup-pro .form .form-element input[type="text"], .popup-pro .form .form-element input[type="password"], .popup-Cadcli .form .form-element input[type="text"], .popup-Cadcli .form .form-element input[type="password"], .popup-Cadafi .form .form-element input[type="text"], .popup-Cadafi .form .form-element input[type="password"], .popup-Cadpro .form .form-element input[type="text"], .popup-Cadpro .form .form-element input[type="password"]{
+
+  margin-top: 5px;
+  display: block;
+  width: 90%;
+  padding: 10px;
+  outline: none;
+  border: 0px solid #aaa;
+  border-radius: 10px;
+}
+
+.popup .form .form-element input[type="checkbox"],  .popup-register .form .form-element input[type="checkbox"]{
+
+  margin-right: 5px;
+
+}
+
+.popup .form .form-element button,   .popup-register .form .form-element button, .popup-cli .form .form-element button, .popup-afi .form .form-element button, .popup-pro .form .form-element button, .popup-Cadcli .form .form-element button, .popup-Cadafi .form .form-element button,  .popup-Cadpro .form .form-element button{
+
+  width: 100%;
+  height: 40px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: #8973d9;
+  color: #f5f5f5;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+
+}
+
+.popup .form .form-element a, .popup-register .form .form-element a, .popup-cli .form .form-element a, .popup-afi .form .form-element a, .popup-pro .form .form-element a, .popup-register .form .form-element a, .popup-Cadcli .form .form-element a, .popup-Cadafi .form .form-element a, .popup-Cadpro .form .form-element a{
+  display: block;
+  text-align: right;
+  font-size: 12px;
+  color: #1a70ca;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+
+}
+
+
+
+.conta_cliente{
+  display: inline;
+  vertical-align: middle;
+  background-color: #ac99f2;
+  border-radius: 100%;
+  padding: 20px;
+  padding-top: 80px;
+  margin-top: 15px;
+  margin-left: 50px;
+}
+
+.conta_cliente img{
+
+  width: 15%;
+  padding-top: 50px
+}
+
+
+
+.conta_afiliado{
+  display: inline;
+  vertical-align: middle;
+  background-color: #b973d9;
+  border-radius: 100%;
+  padding: 20px;
+  padding-top: 80px;
+  margin-top: 15px;
+  margin-left: 20px;
+}
+
+.conta_afiliado img{
+
+  width: 15%;
+  padding-top: 50px
+
+}
+
+#show-accAfi{
+  cursor: pointer;
+}
+
+
+.acc_desc{
+ display: flex;
+ vertical-align: middle;
+ margin-top: 5px;
+ justify-content: space-around;
+}
+
+
+#show-accCli{
+  cursor: pointer;
+}
+
+.conta_profissional img{
+	
+  width: 15%;
+  padding-top: 50px
+}
+
+
+.conta_profissional{
+  display: inline;
+  vertical-align: middle;
+  background-color: #a5eea0;
+  border-radius: 100%;
+  padding: 20px;
+  padding-top: 80px;
+  margin-top: 15px;
+  margin-left: 50px;
+
+}
+
+#show-accPro{
+  cursor: pointer;
+}
+
+
+
+
+
+
+.Caixa__pesquisar{
+
+	background-color: #e0e0e0;
+  display: flex;
+  border-radius: 20px;
+  margin-left:170px;
+  margin-top: 30px
+
+}
+.Caixa__pesquisar > button{
+  background-color: transparent;
+  border: none;
+  outline: none;
+  background-color: #e0e0e0;
+  border-radius: 20px;
+}
+.Caixa__pesquisar > button > img{
+  width: 20px;
+  background-color: #e0e0e0;
+}
+.Caixa__pesquisar > input{
+
+  border: none;
+  outline: none;
+  background-color: #e0e0e0;
+  width: 250px;
+  border-radius: 20px;
+  color: #807e7e;
+
+}
+
+
+
+
+
+
+/* Slideshow container */
+
+.slideimg{
+
+	border-radius: 50px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.slideshow-container {
+  z-index:7;
+  max-width: 1000px;
+  position: relative;
+  padding-top: 50px;
+  padding-left: 170px
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+
+
+
+/* NAVBAR */
+
+.linebar{
+	padding-top: 40px;
+	padding-left: 200px;
+}
+
+.a1 {
+  color: #807e7e;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.a1:hover {
+  opacity: 0.7;
+}
+
+nav {
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+
+.nav-list li {
+  font-weight: 10px;
+  letter-spacing: 0.5px;
+  margin-left: 55px;
+  font-size: 15px;
+}
+
+.mobile-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.mobile-menu div {
+  width: 32px;
+  height: 2px;
+  background: #e0e0e0;
+  margin: 8px;
+  transition: 0.3s;
+}
+
+@media (max-width: 999px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-list {
+    position: absolute;
+    top: 8vh;
+    right: 0;
+    width: 50vw;
+    height: 92vh;
+    background: #e0e0e0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+  }
+  .nav-list li {
+    margin-left: 0;
+    opacity: 0;
+  }
+  .mobile-menu {
+    display: block;
+  }
+}
+
+.nav-list.active {
+  transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.mobile-menu.active .line1 {
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+  opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+  transform: rotate(45deg) translate(-5px, -7px);
+}
+
+
+
+
+/* CATEGORIAS */
+
+.sessao_categorias, .sessao_filtros{
+	display: flex;
+ margin-left: 30px;
+}
+
+.categorias{
+  background-color: #ac99f2;
+  border-radius: 10px;
+  width: 225px;
+  height: 75px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.sessao_filtros{
+
+ margin-top: 25px;
+
+}
+
+.sessao_filtros > p{
+
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-left: 50px;
+  border: 1px solid #20c914;
+  border-radius: 10px;
+
+}
+
+.sessao_filtros > p > a{
+  text-decoration: none;
+  color: #20c914;
+  font-weight: 100px;
+  font-size: 15px;
+}
